@@ -2,7 +2,7 @@ import click
 import six
 from pyfiglet import figlet_format
 
-from . import __version__
+from . import __version__, harden
 
 try:
     import colorama
@@ -33,3 +33,4 @@ def main():
     log("Brick CLI", color="red", figlet=True)
     log("Welcome to Brick CLI", "green")
     click.echo("Hello, world!")
+    harden.install_deps()

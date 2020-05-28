@@ -11,5 +11,3 @@ def install_deps():
             process = subprocess.Popen('sudo apt-get install -y ' + package, shell=True, stdin=None, executable="/bin/bash")
             process.wait()
 
-if __name__=="__main__":
-    install_deps()
