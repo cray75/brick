@@ -1,8 +1,8 @@
 import subprocess
 import os
 
-def configure_node_exporter(server): 
-    server = server
+def configure_node_exporter(): 
+    server = "172.31.18.149"
     os.chdir("~/")
     make_node_user = subprocess.Popen('useradd --no-create-home --shell /bin/false node_exporter', shell=True, stdin=None, executable="/bin/bash")
     make_node_user.wait()
