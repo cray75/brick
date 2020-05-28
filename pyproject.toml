@@ -1,11 +1,20 @@
 [tool.poetry]
-name = "devsec"
+name = "brick-cli"
 version = "0.1.0"
 description = ""
 authors = ["cray75 <craysmith75@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
+click = "^7.1.2"
+PyInquirer = "^1.0.3"
+pyfiglet = "^0.8.post1"
+termcolor = "^1.1.0"
+six = "^1.15.0"
+colorama = "^0.4.3"
+
+[tool.poetry.scripts]
+brick-cli = "brick_cli.cli:main"
 
 [tool.poetry.dev-dependencies]
 
