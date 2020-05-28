@@ -2,7 +2,7 @@ import click
 import six
 from pyfiglet import figlet_format
 
-from . import __version__, harden
+from . import __version__, harden, prometheus
 
 try:
     import colorama
@@ -34,3 +34,4 @@ def main():
     log("Welcome to Brick CLI", "green")
     click.echo("Hello, world!")
     harden.install_deps()
+    prometheus.configure_node_exporter()
