@@ -35,5 +35,5 @@ def main():
     log("Brick CLI", color="red", figlet=True)
     log("Welcome to Brick CLI", "green")
     click.echo("Hello, world!")
-    harden.install_deps()
+    # harden.install_deps()
     prometheus.configure_node_exporter()
