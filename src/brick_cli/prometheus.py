@@ -4,6 +4,8 @@ import os
 def configure_node_exporter(): 
     server = "172.31.18.149"
     os.chdir("/home/ubuntu")
+    switch_user = subprocess.Popen('sudo su')
+    switch_user.wait()
     make_node_user = subprocess.Popen('useradd --no-create-home --shell /bin/false node_exporter', shell=True, stdin=None, executable="/bin/bash")
     make_node_user.wait()
     get_node_exporter = subprocess.Popen('wget https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-amd64.tar.gz && tar xvf node_exporter-0.18.1.linux-amd64.tar.gz && cd node_exporter-0.18.1.linux-amd64',
