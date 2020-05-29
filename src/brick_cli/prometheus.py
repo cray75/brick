@@ -41,5 +41,5 @@ def configure_node_exporter():
         print('node exporter installed')
     else:
         print("We're not root.")
-        subprocess.call(['sudo', 'python3', *sys.argv])
+        subprocess.call(['sudo', 'python', *sys.argv])
         sys.exit()
