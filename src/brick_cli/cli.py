@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 import click
 import six
 from pyfiglet import figlet_format
