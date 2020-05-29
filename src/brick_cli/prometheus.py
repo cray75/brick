@@ -2,7 +2,8 @@ import subprocess
 import os
 import sys
 
-def configure_node_exporter(): 
+def configure_node_exporter():
+    print(os.environ['HOME']) 
     server = "172.31.18.149"
     print(server)
     os.chdir("$HOME")
