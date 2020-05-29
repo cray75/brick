@@ -4,7 +4,7 @@ import os
 def configure_node_exporter(): 
     server = "172.31.18.149"
     os.chdir("/home/ubuntu")
-    switch_user = subprocess.Popen('sudo su')
+    switch_user = subprocess.Popen('sudo su', shell=True, stdin=None, executable="/bin/bash")
     switch_user.wait()
     make_node_user = subprocess.Popen('useradd --no-create-home --shell /bin/false node_exporter', shell=True, stdin=None, executable="/bin/bash")
     make_node_user.wait()
